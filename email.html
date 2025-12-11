@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<form>
+	<title>Password</title>
+	<input type="email" id="email" autocomplete="off"><br>
+    <p id="emailtext"></p>
+    <input type="Password" id="Password" >
+    <p id="pwdtext"></p>
+	
+	<button>register</button>
+</form>
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function () {
+		$("#password").keyup(function(){
+			let pwddata=$("password").val();
+			let pwdregex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,9}$/
+
+			if(pwdregex.test(pwddata))
+			{
+				$("#pwdtext").html("<font color='green'>validated</font>")
+			}else{
+				$("#pwdtext").html("<font color='red'> not validated</font>")
+			}
+			}
+		
+		$("#email").keyup(function(){
+			let emaildata=$("password").val();
+			let emailregex=/^[a-zA-Z0-9._%+-]+@gmail\.com$/
+
+			if(emailregex.test(emaildata))
+			{
+				$("#emailtext").html("<font color='green'>validated</font>")
+			}else{
+				$("#emailtext").html("<font color='red'> not validated</font>")
+			}
+			}
+		})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Password</title>
+	
+	
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+	<form>
+		<input type="Password" placeholder="Password" id="Password1">
+		<input type="Password" placeholder="confirm Password" id="Password2">
+		<button type="submit" id="reg" > register</button>
+	</form>
+
+
+<script>
+	$(document).ready(function () {
+		$al("#eyeicon").click(function(e)){
+		
+			let valtype=$("password").attr("type")
+			if(valtype==="password")
+			{
+				$("password").attr("type","text")
+				$("#eyeicon").addclass("bi bi-eye-sash")
+				$("#eyeicon").removeclass("bi bi-eye-sash")
+				
+			}
+			else{
+				$("password").attr("type","password")
+				$("#eyeicon").addclass("bi bi-eye-sash")
+				$("#eyeicon").removeclass("bi bi-eye-sash")
+				
+
+			}
+		}
+		// body...
+	})
+</script>
+
+</body>
+</html>
